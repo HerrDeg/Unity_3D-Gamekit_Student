@@ -28,13 +28,10 @@ namespace Gamekit3D
         public RangeWeapon rangeWeapon;
 
         [Header("Audio")]
-        public GameObject attackAudio;
-        public GameObject frontStepAudio;
-        public GameObject backStepAudio;
-        public GameObject hitAudio;
-        public GameObject gruntAudio;
-        public GameObject deathAudio;
-        public GameObject spottedAudio;
+        public GameObject attackSource;
+        public GameObject frontStepSource;
+        public GameObject backStepSource;
+        public GameObject hitSource;
 
         public EnemyController controller { get { return m_Controller; } }
         public PlayerController target { get { return m_Target; } }
@@ -83,7 +80,7 @@ namespace Gamekit3D
             controller.animator.SetTrigger(hashThrown);
 
             //We unparent the deathAudio source, as it would destroy it with the gameobject when it get replaced by the ragdol otherwise
-            deathAudio.transform.SetParent(null, true);
+            //deathAudio.transform.SetParent(null, true);
         }
 
         public void ApplyDamage(Damageable.DamageMessage msg)
@@ -132,18 +129,12 @@ namespace Gamekit3D
 
         public void Grunt ()
         {
-            if (gruntAudio != null)
-            {
-
-            }
+            
         }
 
         public void Spotted()
         {
-            if (spottedAudio != null)
-            {
-
-            }
+            
         }
 
         public void CheckNeedFleeing()

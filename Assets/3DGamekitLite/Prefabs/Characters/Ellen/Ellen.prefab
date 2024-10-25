@@ -15545,8 +15545,8 @@ MonoBehaviour:
   canAttack: 1
   cameraSettings: {fileID: 0}
   meleeWeapon: {fileID: 114298887321203036}
-  footstepPlayer: {fileID: 0}
-  hurtAudioPlayer: {fileID: 0}
+  footstepSource: {fileID: 1063099897946804}
+  voiceSource: {fileID: 1967731790908038}
 --- !u!114 &114166992771378430
 MonoBehaviour:
   m_ObjectHideFlags: 0

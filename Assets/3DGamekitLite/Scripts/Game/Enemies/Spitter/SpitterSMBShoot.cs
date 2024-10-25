@@ -29,7 +29,7 @@ namespace Gamekit3D
             m_MonoBehaviour.transform.forward = toTarget.normalized;
             m_MonoBehaviour.controller.SetForward(m_MonoBehaviour.transform.forward);
 
-            if (m_MonoBehaviour.attackAudio != null)
+            if (m_MonoBehaviour.attackSource != null)
             {
 
             }

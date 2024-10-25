@@ -35,8 +35,8 @@ namespace Gamekit3D
 
         GUIContent m_MeleeWeaponContent = new GUIContent("Melee Weapon", "Used for damaging enemies when Ellen swings her staff.");
         GUIContent m_CameraSettingsContent = new GUIContent("Camera Settings", "Used to get the rotation of the current camera so that Ellen faces the correct direction.  Note: This is the only reference which is not part of the Ellen prefab.  It should automatically be set to the Camera Settings script of the CameraRig gameobject when the Prefab is instantiated.");
-        GUIContent m_FootstepPlayerContent = new GUIContent("Footstep Random Audio Player", "Used to play a random sound when Ellen takes a step.");
-        GUIContent m_HurtAudioPlayerContent = new GUIContent("Hurt Random Audio Player", "Used to play a random sound when Ellen gets hurt.");
+        GUIContent m_FootstepPlayerContent = new GUIContent("Footstep Source", "Used as a position to play the footstep sound.");
+        GUIContent m_HurtAudioPlayerContent = new GUIContent("Voice Source", "Used as a position to play Ellens voice.");
 
         void OnEnable()
         {
@@ -52,8 +52,8 @@ namespace Gamekit3D
 
             m_MeleeWeaponProp = serializedObject.FindProperty("meleeWeapon");
             m_CameraSettingsProp = serializedObject.FindProperty("cameraSettings");
-            m_FootstepPlayerProp = serializedObject.FindProperty("footstepPlayer");
-            m_HurtAudioPlayerProp = serializedObject.FindProperty("hurtAudioPlayer");
+            m_FootstepPlayerProp = serializedObject.FindProperty("footstepSource");
+            m_HurtAudioPlayerProp = serializedObject.FindProperty("voiceSource");
         }
 
         public override void OnInspectorGUI()

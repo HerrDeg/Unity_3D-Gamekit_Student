@@ -34,9 +34,10 @@ namespace Gamekit3D
         public float timeToStopPursuit;
 
         [Header("Audio")]
-        public GameObject attackAudio;
-        public GameObject frontStepAudio;
-        public GameObject backStepAudio;
+        public GameObject attackSource;
+        public GameObject hitSource;
+        public GameObject frontStepSource;
+        public GameObject backStepSource;
 
         protected float m_TimerSinceLostTarget = 0.0f;
 

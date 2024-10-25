@@ -112,7 +112,7 @@ namespace Gamekit3D
             meleeWeapon = GetComponentInChildren<MeleeWeapon>();
 
             Transform footStepSource = transform.Find("FootstepSource");
-            Transform hurtSource = transform.Find("VoiceSource");
+            Transform voiceSource = transform.Find("VoiceSource");
 
             cameraSettings = FindObjectOfType<CameraSettings>();
 

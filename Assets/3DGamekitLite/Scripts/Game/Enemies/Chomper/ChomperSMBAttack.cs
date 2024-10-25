@@ -21,7 +21,7 @@ namespace Gamekit3D
             m_MonoBehaviour.transform.forward = toTarget.normalized;
             m_MonoBehaviour.controller.SetForward(m_MonoBehaviour.transform.forward);
 
-            if (m_MonoBehaviour.attackAudio != null)
+            if (m_MonoBehaviour.attackSource != null)
             {
 
             }
@@ -31,7 +31,7 @@ namespace Gamekit3D
         {
             base.OnSLStateExit(animator, stateInfo, layerIndex);
 
-            if (m_MonoBehaviour.attackAudio != null)
+            if (m_MonoBehaviour.attackSource != null)
             {
 
             }
