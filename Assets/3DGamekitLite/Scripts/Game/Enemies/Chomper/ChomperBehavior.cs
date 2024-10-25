@@ -37,10 +37,6 @@ namespace Gamekit3D
         public GameObject attackAudio;
         public GameObject frontStepAudio;
         public GameObject backStepAudio;
-        public GameObject hitAudio;
-        public GameObject gruntAudio;
-        public GameObject deathAudio;
-        public GameObject spottedAudio;
 
         protected float m_TimerSinceLostTarget = 0.0f;
 
@@ -239,7 +235,7 @@ namespace Gamekit3D
             controller.animator.SetTrigger(hashThrown);
 
             //We unparent the hit source, as it would destroy it with the gameobject when it get replaced by the ragdol otherwise
-            deathAudio.transform.SetParent(null, true);
+            //deathAudio.transform.SetParent(null, true);
         }
 
         public void ApplyDamage(Damageable.DamageMessage msg)

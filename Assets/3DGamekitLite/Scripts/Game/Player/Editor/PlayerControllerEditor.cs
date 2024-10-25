@@ -23,11 +23,6 @@ namespace Gamekit3D
         SerializedProperty m_CameraSettingsProp;
         SerializedProperty m_FootstepPlayerProp;
         SerializedProperty m_HurtAudioPlayerProp;
-        SerializedProperty m_LandingPlayerProp;
-        SerializedProperty m_EmoteLandingPlayerProp;
-        SerializedProperty m_EmoteDeathPlayerProp;
-        SerializedProperty m_EmoteAttackPlayerProp;
-        SerializedProperty m_EmoteJumpPlayerProp;
 
         GUIContent m_ScriptContent = new GUIContent("Script");
 
@@ -42,11 +37,6 @@ namespace Gamekit3D
         GUIContent m_CameraSettingsContent = new GUIContent("Camera Settings", "Used to get the rotation of the current camera so that Ellen faces the correct direction.  Note: This is the only reference which is not part of the Ellen prefab.  It should automatically be set to the Camera Settings script of the CameraRig gameobject when the Prefab is instantiated.");
         GUIContent m_FootstepPlayerContent = new GUIContent("Footstep Random Audio Player", "Used to play a random sound when Ellen takes a step.");
         GUIContent m_HurtAudioPlayerContent = new GUIContent("Hurt Random Audio Player", "Used to play a random sound when Ellen gets hurt.");
-        GUIContent m_LandingPlayerContent = new GUIContent("Landing Random Audio Player", "Used to play a random sound when Ellen lands.");
-        GUIContent m_EmoteLandingPlayerContent = new GUIContent("Emote Landing Player", "Used to play a random vocal sound when Ellen lands.");
-        GUIContent m_EmoteDeathPlayerContent = new GUIContent("Emote Death Player", "Used to play a random vocal sound when Ellen dies.");
-        GUIContent m_EmoteAttackPlayerContent = new GUIContent("Emote Attack Player", "Used to play a random vocal sound when Ellen attacks.");
-        GUIContent m_EmoteJumpPlayerContent = new GUIContent("Emote Jump Player", "Used to play a random vocal sound when Ellen jumps.");
 
         void OnEnable()
         {
@@ -64,11 +54,6 @@ namespace Gamekit3D
             m_CameraSettingsProp = serializedObject.FindProperty("cameraSettings");
             m_FootstepPlayerProp = serializedObject.FindProperty("footstepPlayer");
             m_HurtAudioPlayerProp = serializedObject.FindProperty("hurtAudioPlayer");
-            m_LandingPlayerProp = serializedObject.FindProperty("landingPlayer");
-            m_EmoteLandingPlayerProp = serializedObject.FindProperty("emoteLandingPlayer");
-            m_EmoteDeathPlayerProp = serializedObject.FindProperty("emoteDeathPlayer");
-            m_EmoteAttackPlayerProp = serializedObject.FindProperty("emoteAttackPlayer");
-            m_EmoteJumpPlayerProp = serializedObject.FindProperty("emoteJumpPlayer");
         }
 
         public override void OnInspectorGUI()
@@ -99,11 +84,6 @@ namespace Gamekit3D
                 EditorGUILayout.PropertyField(m_CameraSettingsProp, m_CameraSettingsContent);
                 EditorGUILayout.PropertyField(m_FootstepPlayerProp, m_FootstepPlayerContent);
                 EditorGUILayout.PropertyField(m_HurtAudioPlayerProp, m_HurtAudioPlayerContent);
-                EditorGUILayout.PropertyField(m_LandingPlayerProp, m_LandingPlayerContent);
-                EditorGUILayout.PropertyField(m_EmoteLandingPlayerProp, m_EmoteLandingPlayerContent);
-                EditorGUILayout.PropertyField(m_EmoteDeathPlayerProp, m_EmoteDeathPlayerContent);
-                EditorGUILayout.PropertyField(m_EmoteAttackPlayerProp, m_EmoteAttackPlayerContent);
-                EditorGUILayout.PropertyField(m_EmoteJumpPlayerProp, m_EmoteJumpPlayerContent);
                 EditorGUI.indentLevel--;
             }
 

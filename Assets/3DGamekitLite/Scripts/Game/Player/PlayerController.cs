@@ -24,13 +24,9 @@ namespace Gamekit3D
 
         public CameraSettings cameraSettings;            // Reference used to determine the camera's direction.
         public MeleeWeapon meleeWeapon;                  // Reference used to (de)activate the staff when attacking. 
-        public GameObject footstepPlayer;         // Random Audio Players used for various situations.
-        public GameObject hurtAudioPlayer;
-        public GameObject landingPlayer;
-        public GameObject emoteLandingPlayer;
-        public GameObject emoteDeathPlayer;
-        public GameObject emoteAttackPlayer;
-        public GameObject emoteJumpPlayer;
+        public GameObject footstepSource;         // Random Audio Players used for various situations.
+        public GameObject voiceSource;
+
 
         protected AnimatorStateInfo m_CurrentStateInfo;    // Information about the base layer of the animator cached.
         protected AnimatorStateInfo m_NextStateInfo;
@@ -116,8 +112,7 @@ namespace Gamekit3D
             meleeWeapon = GetComponentInChildren<MeleeWeapon>();
 
             Transform footStepSource = transform.Find("FootstepSource");
-            Transform hurtSource = transform.Find("HurtSource");
-            Transform landingSource = transform.Find("LandingSource");
+            Transform hurtSource = transform.Find("VoiceSource");
 
             cameraSettings = FindObjectOfType<CameraSettings>();
 
@@ -644,10 +639,7 @@ namespace Gamekit3D
             CameraShake.Shake(CameraShake.k_PlayerHitShakeAmount, CameraShake.k_PlayerHitShakeTime);
 
             // Play an audio clip of being hurt.
-            if (hurtAudioPlayer != null)
-            {
-
-            }
+            
         }
 
         // Called by OnReceiveMessage and by DeathVolumes in the scene.
