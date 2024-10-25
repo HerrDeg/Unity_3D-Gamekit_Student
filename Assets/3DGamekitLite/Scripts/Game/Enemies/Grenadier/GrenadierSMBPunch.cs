@@ -9,7 +9,7 @@ namespace Gamekit3D
     {
         public override void OnSLStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            if (m_MonoBehaviour.punchAudioPlayer)
+            if (m_MonoBehaviour.punchSource)
             {
 
             }

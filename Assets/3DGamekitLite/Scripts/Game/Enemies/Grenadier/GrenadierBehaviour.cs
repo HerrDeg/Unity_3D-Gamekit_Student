@@ -51,11 +51,11 @@ namespace Gamekit3D
         public Damageable damageable { get { return m_Damageable; } }
 
         [Header("Audio")]
-        public GameObject deathAudioPlayer;
-        public GameObject damageAudioPlayer;
-        public GameObject footstepAudioPlayer;
-        public GameObject throwAudioPlayer;
-        public GameObject punchAudioPlayer;
+        public GameObject deathSource;
+        public GameObject damageSource;
+        public GameObject footstepSource;
+        public GameObject throwSource;
+        public GameObject punchSource;
 
         protected PlayerController m_Target;
         //used to store the position of the target when the Grenadier decide to shoot, so if the player
